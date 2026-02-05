@@ -1,18 +1,15 @@
-using UnityEngine.InputSystem;
+using UnityEngine;
+using System.Collections;
 
-public class Quit
+// Quits the player when the user hits escape
+
+public class Quit : MonoBehaviour
 {
-    public InputActionReference action;
-    void Start()
+    void Update()
     {
-        action.action.Enable();
-        action.action.performed += (ctx) =>
+        if (Input.GetKeyDown("q"))
         {
-            #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-            #else
-                Application.Quit();
-            #endif
-        };
+            Application.Quit();
+        }
     }
 }

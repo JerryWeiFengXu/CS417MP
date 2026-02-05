@@ -12,7 +12,7 @@ public class pointLightScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("1")) {
+        if (Input.GetKeyDown("l")) {
             light.color = UnityEngine.Color.green;
         }
     }
