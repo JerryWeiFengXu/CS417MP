@@ -25,6 +25,7 @@ public class countDown : MonoBehaviour
         if (time <= 0)
         {
             timeText.text = "You lost";
+            Application.Quit();
         } 
     }
 }
